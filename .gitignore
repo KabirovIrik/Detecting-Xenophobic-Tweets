@@ -2,3 +2,4 @@
 .ipynb_checkpoints
 catboost_info
 *.h5
+__pycache__
