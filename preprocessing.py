@@ -13,7 +13,7 @@ class PrepareText:
     def __init__(self, df, to_lower=True, remove_emoji=True, 
         remove_emoticons=True, chat_words_convert=True,
         spell_correct=True, add_space=True, remove_punct=True,
-        remove_stopwords=True, remove_freq=True, remove_rares=True,
+        remove_stopwords=True, remove_freq=False, remove_rares=False,
         remove_url=True, get_lemma=True):
 
         self.TO_LOWER = to_lower
