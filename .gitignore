@@ -3,3 +3,4 @@
 catboost_info
 *.h5
 __pycache__
+test.py
