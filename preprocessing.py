@@ -114,6 +114,12 @@ class PrepareText:
             # Lemmatization
             self.df["Text"] = self.df["Text"].apply(PrepareText.get_lemma, args=(self.nlp,))
 
+        self.set_embedding()
+
+    def set_embedding(self):
+        with self.nlp.disable_pipes():
+            self.doc_vectors = np.array([self.nlp(text).vector for text in self.df['Text']])
+
     @staticmethod
     def get_chat_words():
         # Chat Words Conversion
